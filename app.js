@@ -31,6 +31,6 @@ function sorteio(){
 
 sorteio();
 
-if(tentar_novamente.onclick){
+if(tentar_novamente.onclick == true){
     sorteio();
 }
