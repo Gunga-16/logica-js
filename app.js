@@ -10,7 +10,7 @@ const numero_secreto =  Math.floor(Math.random() * (max - min + 1)) + min;
 
 console.log('Número Secreto = ' + numero_secreto);
 
-function sorteio(){
+function pergunta(){
     let numero_escolhido = prompt('Escolha um número entre 1 e 30');
 
     let resposta = document.querySelector('.container__texto-azul');
@@ -29,8 +29,8 @@ function sorteio(){
     }
 }
 
-sorteio();
+pergunta();
 
 tentar_novamente.onclick = function(){
-    sorteio();
+    pergunta();
 }
