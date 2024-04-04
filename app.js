@@ -13,7 +13,7 @@ if (numero_escolhido == numero_secreto) {
     descobriu.textContent = "descobriu";
 
 } else {
-    resposta.textContent = "acertou!";
+    resposta.textContent = "não acertou!";
     descobriu.textContent = "não descobriu";
 }
 
