@@ -20,6 +20,7 @@ function pergunta(){
 
 
     if (numero_escolhido == numero_secreto) {
+        alert(`Isso aí! Você descobriu o número secreto ${numero_secreto}`);
         resposta.textContent = "acertou!";
         descobriu.textContent = "descobriu";
 
