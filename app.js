@@ -6,7 +6,7 @@ let max = 30;
 
 const numero_secreto =  Math.floor(Math.random() * (max - min + 1)) + min;
 
-console.log(numero_secreto);
+console.log('Número Secreto = ' + numero_secreto);
 
 let resposta = document.querySelector('.container__texto-azul');
 
