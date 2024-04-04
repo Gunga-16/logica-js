@@ -1,6 +1,12 @@
 alert('Boas vindas ao Jogo do Número Secreto');
 
-let numero_secreto = 13;
+let min = 1;
+
+let max = 30;
+
+const numero_secreto =  Math.floor(Math.random() * (max - min + 1)) + min;
+
+console.log(numero_secreto);
 
 let resposta = document.querySelector('.container__texto-azul');
 
