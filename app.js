@@ -25,8 +25,16 @@ function pergunta(){
         descobriu.textContent = "descobriu";
 
     } else {
+        if(numero_escolhido > numero_secreto){
+            alert(`O número secreto é menor que ${numero_escolhido}`)
+        } else {
+            alert(`O número secreto é maior que ${numero_escolhido}`)
+        }
+
         resposta.textContent = "não acertou!";
         descobriu.textContent = "não descobriu";
+
+        
     }
 }
 
