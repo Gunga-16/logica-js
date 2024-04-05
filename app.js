@@ -2,11 +2,11 @@ alert('Boas vindas ao Jogo do Número Secreto');
 
 const recomecar = document.querySelector('.recomecar');
 
-let min = 1;
+let minimo = 1;
 
-let max = 30;
+let maximo = 30;
 
-const numero_secreto =  Math.floor(Math.random() * (max - min + 1)) + min;
+const numero_secreto =  Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
 
 console.log('Número Secreto = ' + numero_secreto);
 
@@ -20,7 +20,7 @@ function jogo() {
     let tentativas = 1;
 
     while(numero_escolhido != numero_secreto) {
-        numero_escolhido =  prompt('Escolha um número entre 1 e 30');
+        numero_escolhido =  prompt( `Escolha um número entre ${minimo} e ${maximo}.`);
 
         if (numero_escolhido == numero_secreto) {
             resposta.textContent = "acertou!";
