@@ -4,7 +4,7 @@ const recomecar = document.querySelector('.recomecar');
 
 let minimo = 1;
 
-let maximo = 30;
+let maximo = 100;
 
 const numero_secreto =  Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
 
