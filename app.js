@@ -31,10 +31,6 @@ function jogo(){
             } else {
                 alert(`O número secreto é maior que ${numero_escolhido}`)
             }
-    
-            resposta.textContent = "não acertou!";
-            descobriu.textContent = "não descobriu";
-    
             
         }
     }
