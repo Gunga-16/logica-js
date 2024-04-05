@@ -10,36 +10,39 @@ const numero_secreto =  Math.floor(Math.random() * (max - min + 1)) + min;
 
 console.log('Número Secreto = ' + numero_secreto);
 
-function pergunta(){
-    let numero_escolhido = prompt('Escolha um número entre 1 e 30');
+function jogo(){
+    let numero_escolhido;
 
     let resposta = document.querySelector('.container__texto-azul');
 
     let descobriu = document.querySelector('.container__texto-azul_descobriu');
 
+    while(numero_escolhido != numero_secreto){
+        numero_escolhido =  prompt('Escolha um número entre 1 e 30');
 
-
-    if (numero_escolhido == numero_secreto) {
-        alert(`Isso aí! Você descobriu o número secreto ${numero_secreto}`);
-        resposta.textContent = "acertou!";
-        descobriu.textContent = "descobriu";
-
-    } else {
-        if(numero_escolhido > numero_secreto){
-            alert(`O número secreto é menor que ${numero_escolhido}`)
+        if (numero_escolhido == numero_secreto) {
+            alert(`Isso aí! Você descobriu o número secreto ${numero_secreto}`);
+            resposta.textContent = "acertou!";
+            descobriu.textContent = "descobriu";
+    
         } else {
-            alert(`O número secreto é maior que ${numero_escolhido}`)
+            if(numero_escolhido > numero_secreto){
+                alert(`O número secreto é menor que ${numero_escolhido}`)
+            } else {
+                alert(`O número secreto é maior que ${numero_escolhido}`)
+            }
+    
+            resposta.textContent = "não acertou!";
+            descobriu.textContent = "não descobriu";
+    
+            
         }
-
-        resposta.textContent = "não acertou!";
-        descobriu.textContent = "não descobriu";
-
-        
     }
+
 }
 
-pergunta();
+jogo();
 
 tentar_novamente.onclick = function(){
-    pergunta();
+    jogo();
 }
