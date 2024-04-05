@@ -1,6 +1,6 @@
 alert('Boas vindas ao Jogo do Número Secreto');
 
-const tentar_novamente = document.querySelector('.tentar_novamente');
+const recomecar = document.querySelector('.recomecar');
 
 let min = 1;
 
@@ -39,6 +39,6 @@ function jogo(){
 
 jogo();
 
-tentar_novamente.onclick = function(){
+recomecar.onclick = function(){
     jogo();
 }
