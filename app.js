@@ -10,7 +10,7 @@ const numero_secreto =  Math.floor(Math.random() * (max - min + 1)) + min;
 
 console.log('Número Secreto = ' + numero_secreto);
 
-function jogo(){
+function jogo() {
     let numero_escolhido;
 
     let resposta = document.querySelector('.container__texto-azul');
@@ -19,16 +19,16 @@ function jogo(){
 
     let tentativas = 1;
 
-    while(numero_escolhido != numero_secreto){
+    while(numero_escolhido != numero_secreto) {
         numero_escolhido =  prompt('Escolha um número entre 1 e 30');
 
         if (numero_escolhido == numero_secreto) {
-            alert(`Isso aí! Você descobriu o número secreto ${numero_secreto} com ${tentativas} tentativas.`);
             resposta.textContent = "acertou!";
             descobriu.textContent = "descobriu";
+            break;   
     
         } else {
-            if(numero_escolhido > numero_secreto){
+            if(numero_escolhido > numero_secreto) {
                 alert(`O número secreto é menor que ${numero_escolhido}`);
             } else {
                 alert(`O número secreto é maior que ${numero_escolhido}`);
@@ -37,10 +37,17 @@ function jogo(){
         }
     }
 
+    if(tentativas > 1) {
+        alert(`Isso aí! Você descobriu o número secreto ${numero_secreto} com ${tentativas} tentativas.`);
+    } else{
+        alert(`Isso aí! Você descobriu o número secreto ${numero_secreto} com ${tentativas} tentativa.`);
+
+    }
+    
 }
 
 jogo();
 
-recomecar.onclick = function(){
+recomecar.onclick = function() {
     jogo();
 }
