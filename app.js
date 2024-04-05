@@ -37,13 +37,9 @@ function jogo() {
         }
     }
 
-    if(tentativas > 1) {
-        alert(`Isso aí! Você descobriu o número secreto ${numero_secreto} com ${tentativas} tentativas.`);
-    } else{
-        alert(`Isso aí! Você descobriu o número secreto ${numero_secreto} com ${tentativas} tentativa.`);
+    let palavra_tentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
 
-    }
-    
+    alert(`Isso aí! Você descobriu o número secreto ${numero_secreto} com ${tentativas} ${palavra_tentativa}.`);
 }
 
 jogo();
